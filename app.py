@@ -14,6 +14,14 @@ with open('text_segmentation_model.pkl', 'rb') as file:
 with open('tfidf_vectorizer.pkl', 'rb') as file:
     tfidf = pickle.load(file)
 
+hide_menu_style = """
+        <style>
+        #MainMenu {visibility: hidden;}
+        footer {visibility: hidden;}
+        </style>
+        """
+st.markdown(hide_menu_style, unsafe_allow_html=True)
+
 st.sidebar.title("Text Sentiment Analysis")
 st.sidebar.markdown("<p style='font-size: 18px;'>Use this app to classify text as positive, negative or neutral based on model predictions.</p>", unsafe_allow_html=True)
 
